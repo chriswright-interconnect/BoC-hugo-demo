@@ -1,0 +1,333 @@
+.hero-banner {
+    position: relative;
+    height: calc(100vh - #{$header-height});
+    min-height: 545px;
+    z-index: 0;
+    overflow: hidden;
+    margin-bottom: 75px;
+
+    @include tablet {
+        min-height: 700px;
+    }
+
+    &--home {
+        background-color: $primary-color;
+    }
+
+    &--john-hegarty {
+        display: flex;
+        flex-direction: column;
+        background-color: $primary-color;
+    }
+
+    &__background {
+        display: flex;
+        flex-direction: column;
+        height: 50%;
+
+        @include desktop {
+            flex-direction: row;
+            position: absolute;
+            top: 0;
+            width: 100%;
+            height: 100%;
+        }
+    }
+
+    &__background-block {
+        @include desktop {
+            width: 65%;
+            background-color: $primary-color;
+        }
+
+        @include widescreen {
+            width: 58%;
+        }
+
+        .hero-banner--john-hegarty & {
+            display: none;
+        }
+    }
+
+    &__cut-in {
+        display: none;
+
+        @include desktop {
+            display: block;
+            width: 100vw;
+            height: 100vw;
+            background-color: $black;
+            position: absolute;
+            top: -35px;
+            transform-origin: top left;
+            transform: translateX(15.25em) rotate(-138deg) skew(-6deg, -10deg);
+        }
+    }
+
+    &__image-container {
+        .hero-banner--home & {
+
+            display: flex;
+            height: 100%;
+
+            @include desktop {
+                width: 55%;
+                margin-left: -10%;
+                clip-path: polygon(30% 0%, 100% 0, 100% 100%, 0% 100%);
+                z-index: 1;
+            }
+
+            @include widescreen {
+                width: 50%;
+                margin-left: -8%;
+            }
+
+            .hero-banner--home & {
+                background-color: $primary-color;
+            }
+        }
+
+        .hero-banner--john-hegarty & {
+            position: relative;
+            flex: 1 0 auto;
+            z-index: 0;
+
+            @include tablet {
+                position: absolute;
+                top: 0;
+                width: 100%;
+                height: 100%;
+                z-index: -1;
+            }
+        }
+
+        &--sm {
+            display: flex;
+
+            .hero-banner--john-hegarty & {
+                @include tablet {
+                    display: none;
+                }
+            }
+        }
+
+        &--lg {
+            .hero-banner--john-hegarty & {
+                display: none;
+
+                @include tablet {
+                    display: flex;
+                }
+            }
+        }
+    }
+
+    &__image-caption {
+        display: none;
+        right: 24px;
+
+        @include tablet {
+            right: 62px;
+        }
+
+        @include desktop {
+            @include font-size(font-sm);
+
+            display: block;
+            position: absolute;
+            bottom: 30px;
+            color: $accent-color;
+            z-index: 1;
+        }
+
+        @include widescreen {
+            right: 72px;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        object-fit: cover;
+
+        .hero-banner--john-hegarty & {
+            // fixes horizontal line on mobile
+            margin-top: 1px;
+
+            z-index: -1;
+
+            @include tablet {
+                margin-top: 0;
+            }
+        }
+    }
+
+    &__overlay {
+        position: absolute;
+        width: 100%;
+        height: 100%;
+        z-index: 1;
+        object-fit: cover;
+    }
+
+    &__content{
+        width: 100%;
+
+        .hero-banner--home & {
+            height: 50%;
+
+            @include desktop {
+                @include grid-column-layout(12);
+
+                position: relative;
+                align-items: flex-end;
+                height: 100%;
+                padding-top: 0;
+                padding-bottom: 0;
+            }
+
+            &::before {
+                content: '';
+                display: block;
+                position: absolute;
+                width: 100%;
+                height: 100%;
+                top: 0;
+                left: 0;
+                right: 0;
+                bottom: 0;
+                background-color: $primary-color;
+                clip-path: polygon(35% 45%, 100% 5%, 100% 65%, 65% 100%, 25% 100%, 0 90%, 0 35%);
+
+                @include desktop {
+                    display: none;
+                }
+            }
+        }
+
+        .hero-banner--john-hegarty & {
+            @include tablet {
+                @include grid-column-layout(12);
+
+                z-index: 1;
+            }
+        }
+    }
+
+    &__text {
+        .hero-banner--home & {
+
+            @include grid-column-layout(4);
+
+            grid-auto-rows: min-content;
+            position: relative;
+            min-height: 60%;
+            padding-bottom: 60px;
+
+            @include mobile {
+                @include column-span(1, 6);
+                @include grid-column-layout(12);
+            }
+
+            @include desktop {
+                @include column-span(1, 8);
+                @include grid-column-layout(7);
+            }
+
+            @include widescreen {
+                @include column-span(1, 8);
+                @include grid-column-layout(7);
+            }
+        }
+
+        .hero-banner--john-hegarty & {
+            @include column-span(1, 7);
+
+            @include widescreen {
+                @include column-span(2, 6);
+            }
+        }
+    }
+
+    &__title {
+        .hero-banner--home & {
+            @include font-size(font-lg-2);
+            @include column-span(1, 5);
+
+            color: $accent-color;
+            font-weight: $medium;
+            max-width: 265px;
+
+            @include mobile {
+                @include column-span(1, 8);
+
+                max-width: 450px;
+            }
+
+            @include tablet {
+                @include font-size(font-lg-3);
+            }
+
+            @include desktop {
+                @include column-span(1, 7);
+                @include font-size(font-lg-4);
+            }
+
+            @include widescreen {
+                @include column-span(2, 8);
+            }
+        }
+
+        .hero-banner--john-hegarty & {
+            @include font-size(font-lg-2);
+
+            color: $black;
+            font-weight: $thin;
+            text-transform: uppercase;
+
+            @include tablet {
+                @include font-size(font-lg-3);
+            }
+
+            @include desktop {
+                @include font-size(font-lg-4);
+            }
+        }
+    }
+
+    &__link {
+        @include column-span(2, 5);
+        @include font-size(font-base);
+        @extend %underline-hover;
+
+        display: flex;
+        align-items: center;
+        font-weight: $medium;
+
+        @include mobile {
+            @include font-size(font-lg-1);
+            @include column-span(2, 8);
+        }
+
+        @include desktop {
+            @include column-span(2, 6);
+        }
+
+        @include widescreen {
+            @include column-span(3, 8);
+        }
+
+        &:link,
+        &:visited {
+            color: $black;
+        }
+
+        &:after {
+            @extend %chevron-right;
+        }
+
+        &:hover::after {
+            @extend %chevron-animation-right;
+        }
+
+    }
+}

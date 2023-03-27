@@ -1,0 +1,27 @@
+{{ $FeatureCards := .FeatureCards }}
+
+<section class="features-list section">
+  <div class="features-list__container section__container">
+
+    <h2 class="features-list__title section__title">{{ .Title }}</h2>
+
+    <div class="features-list__list">
+      {{ range $FeatureCard := $FeatureCards }}
+      <div class="features-list__card">
+        <div class="features-list__card-header">
+          <img
+            class="features-list__card-image"
+            loading="lazy"
+            src='{{ $FeatureCard.image }}'
+            alt="{{ $FeatureCard.title }}"
+          />
+        </div>
+        <div class="features-list__card-body">
+          <h4 class="features-list__card-title">{{ $FeatureCard.title }}</h4>
+          <p class="features-list__card-text">{{ $FeatureCard.description }}</p>
+        </div>
+      </div>
+      {{ end }}
+    </div>
+  </div>
+</section>

@@ -1,0 +1,32 @@
+.header {
+    height: $header-height;
+    background-color: $black;
+
+    @include tablet {
+        height: $header-height-tablet;
+    }
+
+    @include desktop {
+        height: $header-height-desktop;
+    }
+
+    &--global {
+        @include tablet {
+            height: $header-height-global-tablet;
+        }
+
+        @include desktop {
+            height: $header-height-global-desktop;
+        }
+    }
+
+    &__container {
+        align-items: center;
+        display: flex;
+        flex-flow: row nowrap;
+        height: inherit;
+        justify-content: space-between;
+        position: relative;
+        @extend %container-fw;
+    }
+}

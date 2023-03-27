@@ -1,0 +1,194 @@
+/// Mobile
+/// @access public
+@mixin mobile {
+    @media (min-width: $mobile) {
+        @content;
+    }
+}
+
+/// Tablet
+/// @access public
+@mixin tablet {
+    @media (min-width: $tablet) {
+        @content;
+    }
+}
+
+/// Desktop
+/// @access public
+@mixin desktop {
+    @media (min-width: $desktop) {
+        @content;
+    }
+}
+
+/// Widescreen
+/// @access public
+@mixin widescreen {
+    @media (min-width: $widescreen) {
+        @content;
+    }
+}
+
+/// Widescreen
+/// @access public
+@mixin tall-desktop {
+    @media (min-width: $desktop) and (min-height: 900px) {
+        @content;
+    }
+}
+
+@mixin fsz($size) {
+    font-size: $size; //Fallback in px
+    font-size: rem($size);
+}
+
+@mixin lh($size) {
+    line-height: $size; //Fallback in px
+    line-height: rem($size);
+}
+
+// Button mixins deprecated
+// Use @extend .sf-button + any modifiers if possible
+@mixin btn($color: #eee) {
+    @include btn-color($color);
+
+    align-items: center;
+    border: none;
+    border-radius: 0.188em;
+    cursor: pointer;
+    display: inline-flex;
+    font-family: $effra;
+    font-weight: 700;
+    line-height: 1.2;
+    padding: 0.75em 1.15em;
+    text-decoration: none;
+}
+
+@mixin btn-color($color) {
+    background-color: $color;
+    color: button-text-color($color);
+
+    &:link,
+    &:visited {
+        color: button-text-color($color);
+    }
+
+    &:hover,
+    &:focus {
+        background: button-action-color($color, 15%);
+    }
+
+    &:active {
+        background: button-action-color($color, 25%);
+    }
+}
+
+/// Dark theme
+@mixin dark-theme {
+    @media (prefers-color-scheme: dark) {
+        @content;
+    }
+}
+
+// Full width helpers
+@mixin fullwidth {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: none;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+}
+
+@mixin fullwidth-reset {
+    left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    right: auto;
+    width: 100%;
+}
+
+// Grid layout helpers
+@mixin grid-column-layout($col-count, $gridgap : 0 $gutter) {
+    display: grid;
+    grid-template-columns: repeat($col-count, 1fr);
+    grid-gap: $gridgap;
+}
+
+@mixin grid-row-layout($col-count) {
+    grid-template-rows: repeat($col-count, 1fr);
+}
+
+@mixin column-span($start-col, $end-col) {
+    grid-column-start: $start-col;
+    grid-column-end: $end-col;
+}
+
+@mixin row-span($start-row, $end-row) {
+    grid-row-start: $start-row;
+    grid-row-end: $end-row;
+}
+
+// auto load line height with font size
+@mixin font-size($fsz: "font-base") {
+    @include fsz(font($fsz, fsz));
+
+    line-height: font($fsz, lh);
+}
+
+// Removes excess padding when the same coloured section
+// is selected adjacently in the Landing Page Builder
+@mixin adjacent-padding {
+    & + & {
+        .sf-section__container {
+            padding-top: 0;
+        }
+    }
+
+    // Overrides rule for hero banner
+    &.sf-hero-banner + .sf-section {
+        .sf-section__container {
+            padding-top: $section-padding;
+
+            @include desktop {
+                padding-top: $section-padding-lg;
+            }
+        }
+    }
+}
+
+@mixin button-animation($color) {
+    position: relative;
+    overflow: hidden;
+
+    &::after {
+        @extend .sf-button;
+        @extend .sf-button--small;
+
+        content: attr(data-copy);
+        display: block;
+        position: absolute;
+        top: 100%;
+        left: 0;
+        transition: top $transition-speed linear 200ms;
+        background-color: $color;
+    }
+
+    &:hover::after {
+        transition: top $transition-speed linear 200ms;
+        background-color: $color;
+        top: 0;
+    }
+}
+
+@mixin font-adjust ($lh) {
+    &::before {
+        content: '';
+        display: block;
+        height: 0;
+        width: 0;
+        margin-bottom: calc((1 - #{$lh}) * -0.7em);
+    }
+}

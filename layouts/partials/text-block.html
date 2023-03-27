@@ -1,0 +1,27 @@
+<section class="text-block section">
+  <div class="text-block__container section__container">
+
+  <div class="text-block__inner">
+      {{ if .LargeHeader }}
+      <h2 class="text-block__large-header">{{ .LargeHeader | safeHTML }}</h2>
+      {{ end }} 
+
+      {{ if .H2 }}
+      <h2>{{ .H2 | safeHTML }}</h2>
+      {{ end }} 
+
+      {{ if .H3 }}
+      <h3>{{ .H3 | safeHTML }}</h3>
+      {{ end }} 
+      
+      {{ if .P }}
+      <p>{{ .P | safeHTML }}</p>
+      {{ end }}
+
+      {{ if and (.LinkText) (.LinkURL) }}
+      <a class="text-block__link" href="{{ .LinkURL }}">{{ .LinkText }}</a>
+      {{ end }}
+
+    </div>
+  </div>
+</section>

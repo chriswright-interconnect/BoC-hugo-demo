@@ -1,5 +1,37 @@
 {{ define "main" }}
-    <h1>Here is a homepage</h1>
+
+    {{ partial "hero-banner" 
+        (dict 
+            "Type" "home" 
+            "Heading" "The Business of Creativity Course"
+            "ButtonText" "Learn More"
+            "ButtonURL" "#"
+        ) 
+    }}
+
+    {{ partial "text-block" 
+    (dict 
+        "LargeHeader" "Unlock the enormous impact that <strong>creativity</strong> can have on your business, brand and everyday life."
+        "H3" "Sir John Hegarty (creative founder at Saatchi & Saatchi & BBH) will lead an 8-week course to equip you with tangible tools to help you win through the application of creativity."
+        "LinkURL" "#"
+        "LinkText" "Learn More"
+    )
+    }}
+
+    {{ partial "features-list" (dict "FeatureCards" .Params.FeatureCards "Title" "COURSE FORMAT") }}
+
+
+    {{ partial "text-block" 
+    (dict 
+        "LargeHeader" "70% of companies that engage with <strong>creativity</strong> had above-average total returns to shareholders."
+        "H3" "<strong>McKinsey & Company</strong>"
+    )
+    }}
+
+    {{ partial "video" (dict "YouTubeURL" "https://youtu.be/Vj5zy2q7O9U") }}
+
+    {{ partial "statistics" (dict "Statistics" .Params.Statistics) }}
 
     <p>{{.Content}}</p>
+
 {{ end }}

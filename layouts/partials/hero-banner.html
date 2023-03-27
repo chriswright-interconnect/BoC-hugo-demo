@@ -1,0 +1,53 @@
+<section class="hero-banner section hero-banner--{{.Type}}">
+  {{ if eq .Type "home" }}
+  <div class="hero-banner__background">
+    <div class="hero-banner__background-block"></div>
+    <div class="hero-banner__image-container">
+      {{ $heroImageHome := resources.Get "../assets/images/hero-homepage.jpg" }}
+      <img class="hero-banner__image" src="{{ $heroImageHome.RelPermalink }}" />
+    </div>
+  </div>
+  {{ end }}
+
+  <div class="hero-banner__content section__container">
+    <div class="hero-banner__text">
+      {{ if eq .Type "home" }}
+      <div class="hero-banner__cut-in"></div>
+      {{ end }}
+
+      <h1 class="hero-banner__title">{{ .Heading }}</h1>
+
+      {{ if and (.ButtonText) (.ButtonURL) }}
+      <a class="hero-banner__link" href="{{ .ButtonURL }}">
+        {{ .ButtonText }}
+      </a>
+      {{ end }}
+    </div>
+
+    {{ if eq .Type "home" }}
+    <p class="hero-banner__image-caption">
+      Sir John Hegarty, Founder at Saatchi & Saatchi & BBH
+    </p>
+    {{ end }}
+
+  </div>
+
+  {{ if eq .Type "john-hegarty" }}
+
+    <div class="hero-banner__image-container hero-banner__image-container--sm">
+      {{ $overlaySM := resources.Get "../assets/images/hero-overlay-sm.svg" }}
+      <img class="hero-banner__overlay" src="{{ $overlaySM.RelPermalink }}"/>
+      {{ $heroImageJHsm := resources.Get "../assets/images/hero-jh-sm.jpg" }}
+      <img class="hero-banner__image" src="{{ $heroImageJHsm.RelPermalink }}"/>
+    </div>
+
+    <div class="hero-banner__image-container hero-banner__image-container--lg">
+        {{ $overlay := resources.Get "../assets/images/hero-overlay.svg" }}
+        <img class="hero-banner__overlay" src="{{ $overlay.RelPermalink }}"/>
+        {{ $heroImageJH := resources.Get "../assets/images/hero-jh.jpg" }}
+        <img class="hero-banner__image" src="{{ $heroImageJH.RelPermalink }}"/>
+    </div>
+
+  {{ end }}
+
+</section>

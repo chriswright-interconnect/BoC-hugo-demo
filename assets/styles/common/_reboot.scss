@@ -1,0 +1,88 @@
+:root {
+    @each $color, $value in $colors {
+        --#{$color}: #{$value};
+    }
+
+    @each $color, $value in $greys {
+        --#{$color}: #{$value};
+    }
+
+    --effra: #{inspect($effra)};
+}
+
+html {
+    box-sizing: border-box;
+    font-size: 100%;
+}
+
+*,
+*::before,
+*::after {
+    box-sizing: inherit;
+}
+
+body {
+    display: flex;
+    flex-direction: column;
+    background: $accent-color-light;
+    color: $black;
+    font-family: $effra;
+    font-size: 1rem;
+    line-height: $root-line-height;
+    min-height: 100vh;
+    overflow-x: hidden;
+    scroll-behavior: smooth;
+    text-rendering: optimizeSpeed;
+    -webkit-font-smoothing: antialiased;
+
+    &.overlay {
+        overflow-y: hidden;
+    }
+}
+
+/* Remove default margin */
+body,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+ul,
+ol,
+figure,
+blockquote,
+dl,
+dd {
+    margin: 0;
+}
+
+/* A elements that don't have a class get default styles */
+a:not([class]) {
+    text-decoration-skip-ink: auto;
+}
+
+/* Make images easier to work with */
+img {
+    display: block;
+    max-width: 100%;
+}
+
+/* Inherit fonts for inputs and buttons */
+input,
+button,
+textarea,
+select {
+    font: inherit;
+}
+
+/* Remove all animations and transitions for people that prefer not to see them */
+@media (prefers-reduced-motion: reduce) {
+    * {
+        animation-duration: 0.01ms !important;
+        animation-iteration-count: 1 !important;
+        scroll-behavior: auto !important;
+        transition-duration: 0.01ms !important;
+    }
+}

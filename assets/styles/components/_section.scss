@@ -1,0 +1,22 @@
+.section {
+    overflow: hidden;
+    position: relative;
+
+    &__container {
+        @extend %container;
+        @extend %section-padding;
+    }
+
+    &__title {
+        @include fsz($font-lg-1);
+
+        font-family: $effra;
+        margin-bottom: 30px;
+
+        @include desktop {
+            @include fsz($font-lg-2);
+
+            margin-bottom: 50px;
+        }
+    }
+}

@@ -1,0 +1,134 @@
+.primary-menu {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    left: 0;
+    right: 0;
+    top: -100vh;
+    z-index: 1000;
+    transition: top $transition-speed linear;
+    background-color: $black;
+
+    &--is-openned {
+        // Spelling error in base theme - must be resolved during refactor
+        top: $header-height;
+
+        @include tablet {
+            top: $header-height-tablet;
+        }
+    }
+
+    @include desktop {
+        position: relative;
+        width: auto;
+        height: auto;
+        top: 0;
+    }
+
+    &__list {
+        display: flex;
+        flex-direction: column;
+        height: inherit;
+        list-style: none;
+        margin: 0;
+        padding: 40px 24px;
+
+        @include tablet {
+            padding: 40px 62px;
+        }
+
+        @include desktop {
+            flex-direction: row;
+            align-items: center;
+            padding: 0;
+        }
+    }
+
+    &__item {
+
+        @include desktop {
+            display: inline-block;
+            height: inherit;
+            margin-left: 30px;
+            vertical-align: bottom;
+        }
+
+        &--login {
+            text-transform: uppercase;
+
+            @include desktop {
+                margin-left: 60px;
+            }
+        }
+
+        &:first-child {
+            @include desktop {
+                margin-left: 0;
+            }
+        }
+    }
+
+    &__link {
+        @include fsz($font-sm);
+
+        display: block;
+        padding: 20px 0;
+        position: relative;
+        font-weight: $medium;
+        text-decoration: none;
+
+        @include desktop {
+            @include fsz($font-sm-1);
+
+            padding: 0;
+            line-height: 0.9;
+        }
+
+        .primary-menu__item--login & {
+            @include desktop {
+                @include fsz($font-sm-2);
+            }
+        }
+
+        .primary-menu__item--book & {
+            @extend .sf-button;
+            @extend .sf-button--small;
+            @extend .sf-button--primary;
+
+            margin-top: 40px;
+
+            @include desktop {
+                margin-top: 0;
+            }
+        }
+
+        &:link,
+        &:visited {
+            color: $white;
+        }
+
+        &:hover {
+            color: $primary-color;
+        }
+
+        &--is-active {
+            &:link,
+            &:visited {
+                color: $primary-color;
+                pointer-evets: none;
+
+                .primary-menu__item--book & {
+                    color: $white;
+                }
+            }
+
+            &:hover {
+                color: $primary-color;
+
+                .primary-menu__item--book & {
+                    color: $white;
+                }
+            }
+        }
+    }
+}

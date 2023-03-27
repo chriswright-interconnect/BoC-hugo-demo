@@ -1,0 +1,222 @@
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+    color: $headings-color;
+    font-family: $effra;
+    font-weight: $headings-font-weight;
+    margin-bottom: 0.5em;
+    margin-top: 0;
+    caret-color: transparent;
+}
+
+h1 {
+    @include font-size(font-lg-3);
+
+    @include tablet {
+        @include font-size(font-lg-4);
+    }
+}
+
+h2 {
+    @include font-size(font-lg-1);
+
+    @include mobile {
+        @include font-size(font-lg-2);
+    }
+
+    @include tablet {
+        @include font-size(font-lg-3);
+    }
+}
+
+h3 {
+    @include font-size(font-lg);
+
+    @include tablet {
+        @include font-size(font-lg-1);
+    }
+}
+
+h4 {
+    @include font-size(font-lg);
+}
+
+h5 {
+    @include font-size(font-base);
+}
+
+h6 {
+    @include font-size(font-base);
+}
+
+p {
+    @include font-size(font-base);
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    margin-top: 0;
+    caret-color: transparent;
+}
+
+div,
+span {
+    caret-color: transparent;
+}
+
+address {
+    @include font-size(font-base);
+
+    font-style: normal;
+    line-height: inherit;
+    margin-bottom: 1rem;
+}
+
+ol,
+ul,
+dl {
+    @include font-size(font-base);
+
+    line-height: 1.4;
+    margin-bottom: 1rem;
+    margin-top: 0;
+}
+
+ol ol,
+ul ul,
+ol ul,
+ul ol {
+    margin-bottom: 0;
+}
+
+dt {
+    font-weight: bold;
+}
+
+dd {
+    margin-bottom: 0.5rem;
+    margin-left: 0;
+}
+
+blockquote {
+    margin: 0 0 1rem;
+}
+
+a,
+area,
+button,
+[role="button"],
+input,
+label,
+select,
+summary,
+textarea {
+    touch-action: manipulation;
+}
+
+a {
+    color: $link-color;
+    text-decoration: $link-decoration;
+    transition-property: color, text-decoration;
+    transition-duration: $transition-speed;
+    transition-timing-function: linear;
+    text-underline-offset: 0.25em;
+
+    &:hover {
+        color: $link-hover-color;
+        text-decoration: $link-hover-decoration;
+    }
+
+    &:focus,
+    &:active {
+        color: $link-hover-color;
+    }
+}
+
+pre {
+    margin-bottom: 1rem;
+    margin-top: 0;
+    overflow: auto;
+}
+
+figure {
+    margin: 0 0 1rem;
+}
+
+img {
+    height: auto;
+    max-width: 100%;
+    vertical-align: middle;
+}
+
+[role="button"] {
+    cursor: pointer;
+}
+
+table {
+    background-color: transparent;
+    border-collapse: collapse;
+}
+
+caption {
+    caption-side: bottom;
+    color: $grey-100;
+    padding-bottom: 0.75rem;
+    padding-top: 0.75rem;
+    text-align: left;
+}
+
+th {
+    text-align: left;
+}
+
+label {
+    display: inline-block;
+    margin-bottom: 0.5rem;
+}
+
+input,
+button,
+select,
+textarea {
+    line-height: inherit;
+}
+
+button:focus {
+    outline: 1px dotted;
+    outline: 5px auto -webkit-focus-ring-color;
+}
+
+input[type="date"],
+input[type="time"],
+input[type="datetime-local"],
+input[type="month"] {
+    -webkit-appearance: listbox;
+}
+
+textarea {
+    resize: vertical;
+}
+
+fieldset {
+    border: 0;
+    margin: 0;
+    min-width: 0;
+    padding: 0;
+}
+
+legend {
+    display: block;
+    font-size: 1.5rem;
+    line-height: inherit;
+    margin-bottom: 0.5rem;
+    padding: 0;
+    width: 100%;
+}
+
+input[type="search"] {
+    -webkit-appearance: none;
+}
+
+@import "../abstracts/placeholders";

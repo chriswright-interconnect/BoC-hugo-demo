@@ -1,0 +1,19 @@
+.logo {
+
+    &__link {
+        display: block;
+        width: 154px;
+
+        svg {
+            overflow: visible;
+        }
+    }
+
+    &__icon {
+        transition: transform 100ms linear;
+
+        .logo__link:hover & {
+            transform: translateY(-10px);
+        }
+    }
+}

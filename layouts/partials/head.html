@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8" />
+  <title>{{ block "title" . }} {{ .Site.Title }} {{ end }}</title>
+
+  {{ $sass := resources.Get "../assets/styles/main.scss" }} 
+  {{ $style := $sass | resources.ToCSS }}
+
+  <link rel="stylesheet" href="{{ $style.RelPermalink }}"/>
+  <link rel="stylesheet" href="https://use.typekit.net/cpz0fqw.css">
+
+  {{ $js := resources.Get "../assets/js/main.js" | js.Build }}
+
+  <script defer crossorigin="anonymous" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+</head>

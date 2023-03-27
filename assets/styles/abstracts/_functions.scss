@@ -1,0 +1,40 @@
+// Convert px to rems
+@function rem($size) {
+    $remSize: $size / $root-font-size;
+    @return #{$remSize}rem;
+}
+
+// Buttons
+@function button-text-color($background-color) {
+    @if (lightness($background-color) > 50) {
+        @return $black;
+    }
+
+    @else {
+        @return $white;
+    }
+}
+
+@function button-action-color($background-color, $value) {
+    @if (lightness($background-color) > 50) {
+        @return darken($background-color, $value);
+    }
+
+    @else if ($background-color == $black) {
+        @return $primary-color;
+    }
+
+    @else {
+        @return lighten($background-color, $value);
+    }
+}
+
+// Map $font-sizes array
+// map the $font-sizes array
+@function font($fsz, $lh: "lh") {
+    @if map-has-key($font-sizes, $fsz) {
+        @return map-get(map-get($font-sizes, $fsz), $lh);
+    } @else {
+        @error "Property #{$fsz} does not exist";
+    }
+}

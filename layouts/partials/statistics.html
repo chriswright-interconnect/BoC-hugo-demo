@@ -1,0 +1,26 @@
+{{ $Statistics := .Statistics }}
+
+<section class="statistics section">
+  <div class="statistics__content section__container">
+
+    <div class="statistics__list">
+    
+        {{ range $Statistic := $Statistics }}
+
+            <div class="statistics__block">
+                <h3 class="statistics__block-number">
+                    {{ $Statistic.number }}
+                </h3>
+                <p class="statistics__block-label">
+                    {{ $Statistic.text }}
+                </p>
+                <div class="statistics__block-icon">
+                    {{ partial "svg" "icon" }}
+                </div>
+            </div>
+        {{ end }}
+
+    </div>
+
+  </div>
+</section>

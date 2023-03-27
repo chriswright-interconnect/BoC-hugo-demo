@@ -1,0 +1,162 @@
+// Root fonts
+$root-font-size: 16px;
+$root-line-height: 1.5;
+
+// Primary fonts
+$effra: effra, sans-serif;
+
+//Font Weights
+$thin: 100;
+$extra-light: 200;
+$light: 300;
+$regular: 400;
+$medium: 500;
+$semi-bold: 600;
+$bold: 700;
+$extra-bold: 800;
+$heavy: 900;
+
+// Headings fonts
+$headings-font-weight: $medium;
+$headings-line-height: 1.1;
+$headings-color: inherit;
+
+//Font Sizes
+$font-lg-5: 104px;
+$font-lg-4: 67px;
+$font-lg-3: 53px;
+$font-lg-2: 42px;
+$font-lg-1: 34px;
+$font-lg: 27px;
+$font-base: 22px;
+$font-sm: 18px;
+$font-sm-1: 16px;
+$font-sm-2: 14px;
+
+$font-sizes: (
+    font-lg-5: (
+        fsz: $font-lg-5,
+        lh: 1.1,
+    ),
+    font-lg-4: (
+        fsz: $font-lg-4,
+        lh: 1.1,
+    ),
+    font-lg-3: (
+        fsz: $font-lg-3,
+        lh: 1.1,
+    ),
+    font-lg-2: (
+        fsz: $font-lg-2,
+        lh: 1.2,
+    ),
+    font-lg-1: (
+        fsz: $font-lg-1,
+        lh: 1.2,
+    ),
+    font-lg: (
+        fsz: $font-lg,
+        lh: 1.2,
+    ),
+    font-base: (
+        fsz: $font-base,
+        lh: 1.6,
+        fa: 1.3
+    ),
+    font-sm: (
+        fsz: $font-sm,
+        lh: 1.6,
+    ),
+    font-sm-1: (
+        fsz: $font-sm-1,
+        lh: 1.4,
+    ),
+    font-sm-2: (
+        fsz: $font-sm-2,
+        lh: 1.4,
+    ),
+);
+
+// Colors
+$primary-color: #ff0023;
+$accent-color: #fad7be;
+$accent-color-light: #FAEDE8;
+
+$white: #fff;
+$black: #232323;
+
+$grey-100: #ccc;
+$grey-500: #777;
+$grey-900: #333;
+
+$alert-success: #a5d6a7;
+$alert-error: #ff0023;
+$alert-warning: #ffe082;
+
+$colors: (
+    'primary-color': $primary-color,
+    'alert-success': $alert-success,
+    'alert-error': $alert-error,
+    'alert-warning': $alert-warning
+);
+
+$greys: (
+    'white': $white,
+    'grey-100': $grey-100,
+    'grey-500': $grey-500,
+    'grey-900': $grey-900,
+    'black': $black,
+);
+
+$link-color: $black;
+$link-decoration: none;
+$link-hover-color: $primary-color;
+$link-hover-decoration: none;
+
+$facebook: #3b5998;
+$linkedin: #007bb5;
+$twitter: #55acee;
+$google: #dd4b39;
+
+// Transition
+$transition-speed: 200ms;
+
+// Z-index
+$z-index-max: 1000;
+
+// Breakpoints
+$mobile: 550px;
+$tablet: 760px;
+$desktop: 1000px;
+//$widescreen: 1290px;
+
+// Breakpoints
+//$mobile: 550px;
+//$tablet: 760px;
+//$desktop: 1180px;
+$widescreen: 1400px;
+
+// Containers
+$container-mobile-width: 576px;
+$container-tablet-width: 720px;
+$container-desktop-width: 940px;
+$container-widescreen-width: 1606px;
+
+$container-mobile-width: 366px;
+$container-tablet-width: 1055px;
+$container-desktop-width: 1222px;
+$container-widescreen-width: 1606px;
+
+$header-height: 95px;
+$header-height-tablet: 95px;
+$header-height-desktop: 106px;
+
+$header-height-global-tablet: 84px;
+$header-height-global-desktop: 102px;
+
+// Page Builder
+$section-padding: 50px;
+$section-padding-lg: 75px;
+
+// Layout
+$gutter: 50px;

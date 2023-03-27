@@ -1,0 +1,9 @@
+<section class="video section">
+  <div class="video__container section__container">
+    {{ $iframe := printf "<iframe src='%s?rel=0&modestbranding=1&autoplay=1'  frameborder='0' allow='accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture' allowfullscreen></iframe>" .YouTubeURL }}
+    <div
+      class="video__embed lazy-video lazy-video--hd"
+      data-embed="{{ $iframe }}">
+    </div>
+  </div>
+</section>

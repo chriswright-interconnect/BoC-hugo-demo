@@ -1,0 +1,357 @@
+%admin-bar-fix {
+    .admin-bar & {
+        margin-top: 46px;
+        min-height: calc(100vh - 46px);
+
+        @media only screen and (min-width: 782px) {
+            margin-top: 32px;
+            min-height: calc(100vh - 32px);
+        }
+    }
+}
+
+%clearfix {
+    &::after {
+        clear: both;
+        content: " ";
+        display: table;
+    }
+}
+
+%container {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @include tablet {
+        max-width: calc(#{$container-tablet-width} + 124px);
+        padding-left: 62px;
+        padding-right: 62px;
+    }
+
+    @include tablet {
+        max-width: calc(#{$container-desktop-width} + 124px);
+        padding-left: 62px;
+        padding-right: 62px;
+    }
+
+    @include widescreen {
+        max-width: calc(#{$container-widescreen-width} + 144px);
+        padding-left: 72px;
+        padding-right: 72px;
+    }
+}
+
+%container-fw {
+    margin-left: auto;
+    margin-right: auto;
+    padding-left: 24px;
+    padding-right: 24px;
+
+    @include tablet {
+        padding-left: 40px;
+        padding-right: 40px;
+    }
+}
+
+%full-width {
+    left: 50%;
+    margin-left: -50vw;
+    margin-right: -50vw;
+    max-width: none;
+    position: relative;
+    right: 50%;
+    width: 100vw;
+}
+
+%full-width-reset {
+    left: auto;
+    margin-left: 0;
+    margin-right: 0;
+    right: auto;
+    width: 100%;
+}
+
+%input-text {
+    border: none;
+    box-shadow: inset 0 0 3px 0 $grey-500;
+    height: 2.7rem;
+    padding: 10px 20px;
+}
+
+%keyboard-only {
+    border: 0;
+    clip: rect(0 0 0 0);
+    clip-path: inset(100%);
+    height: 1px;
+    margin: -1px;
+    overflow: hidden;
+    padding: 0;
+    position: absolute;
+    white-space: nowrap;
+    width: 1px;
+}
+
+%list-reset {
+    list-style: none;
+    margin-bottom: 0;
+    padding-left: 0;
+}
+
+%section-padding {
+    padding-bottom: $section-padding;
+    padding-top: $section-padding;
+
+    @include desktop {
+        padding-bottom: $section-padding-lg;
+        padding-top: $section-padding-lg;
+    }
+}
+
+%section-title-size {
+    @include fsz(48px);
+    @include lh(58px);
+
+    @include tablet {
+        @include fsz(58px);
+        @include lh(68px);
+    }
+}
+
+%title-light {
+    @include fsz($font-lg);
+
+    font-family: $effra;
+    font-weight: $thin;
+    text-align: center;
+    text-transform: uppercase;
+    margin-bottom: 30px;
+
+    @include tablet {
+        @include fsz($font-lg-1);
+
+        margin-bottom: 50px;
+    }
+}
+
+%toggle {
+    align-items: center;
+    display: flex;
+    height: 40px;
+    padding: 0 8px;
+    transition: fill $transition-speed ease-in-out;
+    width: 40px;
+}
+
+// Standard Grid Columns
+// Assuming 4 col grid for mobile & 12 col grid for wider screens
+
+%col-1 {
+    grid-column: 4 span;
+
+    @include mobile {
+        grid-column: 12 span;
+    }
+}
+
+%col-2 {
+    grid-column: 4 span;
+
+    @include mobile {
+        grid-column: 12 span;
+    }
+
+    @include tablet {
+        grid-column: 6 span;
+    }
+}
+
+%col-3 {
+    grid-column: 4 span;
+
+    @include mobile {
+        grid-column: 6 span;
+    }
+
+    @include tablet {
+        grid-column: 4 span;
+    }
+}
+
+%col-4 {
+    grid-column: 4 span;
+
+    @include mobile {
+        grid-column: 6 span;
+    }
+
+    @include desktop {
+        grid-column: 3 span;
+    }
+}
+
+%col-6 {
+    grid-column: 4 span;
+
+    @include mobile {
+        grid-column: 6 span;
+    }
+
+    @include tablet {
+        grid-column: 4 span;
+    }
+
+    @include desktop {
+        grid-column: 2 span;
+    }
+}
+
+%chevron-right {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    width: 25px;
+    height: 100%;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='uuid-dd1a9dda-04b4-4885-b382-f646c6cd6f02' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.85 24.42'%3E%3Cpath id='uuid-a4ab42e9-38e4-4818-a7c7-be5c7c28111f' data-name='Path 881' d='M.75,0L13.87,12.63,0,24.42,26.85,13.03,.75,0Z' fill='%23232323'/%3E%3C/svg%3E");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center 0.3em;
+    //margin-bottom: 5px;
+    margin-left: 5px;
+    transition-property: background-image, transform;
+    transition-duration: $transition-speed;
+    transition-timing-function: ease-in-out;
+}
+
+%chevron-animation-right {
+    transform: translateX(10px);
+}
+
+%chevron-left {
+    content: "";
+    display: block;
+    position: relative;
+    left: 0;
+    width: 25px;
+    height: 20px;
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='uuid-16e2e770-2e94-462c-b26d-dabf12acd85e' data-name='uuid-dfbd28c1-f9b8-4951-99f9-3d861924d60b' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.85 24.42'%3E%3Cpath id='uuid-07fb1a9f-efc5-4fa6-ae15-4e9cd469435d' data-name='uuid-0e2e0159-d2f6-4c4f-a15b-9615606f5444' d='M0,13.03l26.85,11.39L12.98,12.63,26.1,0,0,13.03Z' fill='%23232323'/%3E%3C/svg%3E");
+    background-size: 100%;
+    background-repeat: no-repeat;
+    background-position: center;
+    margin-bottom: 5px;
+    margin-right: 5px;
+    transition-property: background-image, transform;
+    transition-duration: $transition-speed;
+    transition-timing-function: ease-in-out;
+}
+
+%chevron-animation-left {
+    transform: translateX(-10px);
+}
+
+%chevron-right-hover-red {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='uuid-dd1a9dda-04b4-4885-b382-f646c6cd6f02' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.85 24.42'%3E%3Cpath id='uuid-a4ab42e9-38e4-4818-a7c7-be5c7c28111f' data-name='Path 881' d='M.75,0L13.87,12.63,0,24.42,26.85,13.03,.75,0Z' fill='%23ff0023'/%3E%3C/svg%3E");
+}
+
+%chevron-left-hover-red {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='uuid-3b169a18-7bfc-4fcc-9652-f9ec5b47131d' data-name='uuid-dfbd28c1-f9b8-4951-99f9-3d861924d60b' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.85 24.42'%3E%3Cpath id='uuid-64a31d3d-2f80-4f42-ada9-6432f0d93e2f' data-name='uuid-0e2e0159-d2f6-4c4f-a15b-9615606f5444' d='M0,13.03l26.85,11.39L12.98,12.63,26.1,0,0,13.03Z' fill='%23ff0023'/%3E%3C/svg%3E");
+}
+
+%chevron-hover-white {
+    background-image: url("data:image/svg+xml,%3C%3Fxml version='1.0' encoding='UTF-8'%3F%3E%3Csvg id='uuid-dd1a9dda-04b4-4885-b382-f646c6cd6f02' data-name='Layer 1' xmlns='http://www.w3.org/2000/svg' viewBox='0 0 26.85 24.42'%3E%3Cpath id='uuid-a4ab42e9-38e4-4818-a7c7-be5c7c28111f' data-name='Path 881' d='M.75,0L13.87,12.63,0,24.42,26.85,13.03,.75,0Z' fill='%23ffffff'/%3E%3C/svg%3E");
+}
+
+%underline-hover {
+    text-decoration: underline;
+    text-underline-offset: 0.25em;
+    text-decoration-color: transparent;
+    transition: text-decoration-color $transition-speed linear;
+
+    &:hover {
+        text-decoration: underline;
+        text-decoration-color: inherit;
+    }
+}
+
+%page-header {
+    @include font-size(font-lg-1);
+
+    font-weight: $light;
+    margin-bottom: 0;
+    grid-column: 12 span;
+    text-transform: uppercase;
+
+    @include tablet {
+        @include font-size(font-lg-2);
+    }
+
+    @include desktop {
+        @include font-size(font-lg-3);
+    }
+}
+
+%text-elements {
+    @include font-size(font-base);
+
+    font-weight: $thin;
+
+    h2 {
+        @include desktop {
+            @include font-size(font-lg-4);
+        }
+    }
+
+    p,
+    ul,
+    ol {
+        @include font-size(font-base);
+    }
+
+    p {
+        font-weight: $thin;
+        margin-bottom: 2rem;
+    }
+
+    a {
+        text-decoration: underline;
+
+        &:hover {
+            text-decoration: underline;
+        }
+    }
+
+    ul,
+    ol {
+        list-style: none;
+
+        @include font-size(font-base);
+
+        @include desktop {
+            @include font-size(font-lg);
+        }
+    }
+
+    li {
+        position: relative;
+        margin-bottom: 10px;
+        font-weight: $medium;
+
+        @include desktop {
+            margin-bottom: 20px;
+        }
+
+        &::before {
+            content: "";
+            display: block;
+            position: absolute;
+            top: 0.4em;
+            left: -30px;
+            width: 0.4em;
+            height: 0.4em;
+            background-color: $black;
+            border-radius: 50%;
+        }
+    }
+}
