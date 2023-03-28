@@ -1,0 +1,34 @@
+.logotypes {
+    &__title.sf-section__title {
+        @extend %title-light;
+    }
+
+    &__list {
+        @include grid-column-layout(4);
+
+        @include mobile {
+            @include grid-column-layout(12);
+        }
+    }
+
+    &__item {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        height: 150px;
+        grid-column: 2 span;
+
+        @include mobile {
+            grid-column: 4 span;
+        }
+
+        @include desktop {
+            grid-column: 3 span;
+            padding: 20px;
+        }
+
+        @include widescreen {
+            padding: 40px;
+        }
+    }
+}

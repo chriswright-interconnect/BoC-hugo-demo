@@ -22,5 +22,19 @@ Statistics:
     text: "found the course very inspiring"
   - number: "92%"
     text: "said the course was thought provoking"
+Logos:
+  - image: "images/companies/Barclays.svg"
+  - image: "images/companies/BBH.svg"
+  - image: "images/companies/Channel 4.svg"
+  - image: "images/companies/CityAM.svg"
+  - image: "images/companies/Confused.com.svg"
+  - image: "images/companies/Diageo.svg"
+  - image: "images/companies/Disney.svg"
+  - image: "images/companies/Fiverr.svg"
+  - image: "images/companies/Heiniken.svg"
+  - image: "images/companies/HSBC.svg"
+  - image: "images/companies/Lego.svg"
+  - image: "images/companies/Virgin Media.svg"
+
 
 ---

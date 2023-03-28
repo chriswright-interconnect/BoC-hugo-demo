@@ -18,7 +18,7 @@
     )
     }}
 
-    {{ partial "features-list" (dict "FeatureCards" .Params.FeatureCards "Title" "COURSE FORMAT") }}
+    {{ partial "features-list" (dict "FeatureCards" .Params.FeatureCards "Title" "Course Format") }}
 
 
     {{ partial "text-block" 
@@ -31,6 +31,8 @@
     {{ partial "video" (dict "YouTubeURL" "https://youtu.be/ChFELzrJr4Q") }}
 
     {{ partial "statistics" (dict "Statistics" .Params.Statistics) }}
+
+    {{ partial "logotypes" (dict "Title" "Global Companies Enrolled" "Logos" .Params.Logos) }}
 
     <p>{{.Content}}</p>
 

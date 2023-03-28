@@ -1,0 +1,15 @@
+
+
+<section class="logotypes section">
+  <div class="logotypes__content section__container">
+    <h2 class="logotypes__title sf-section__title">{{ .Title }}</h2>
+
+    <div class="logotypes__list">
+        {{ $Logos := .Logos }} {{ range $Logo := $Logos }}
+        <div class="logotypes__item">
+            <img loading="lazy" src="{{ $Logo.image }}" />
+        </div>
+        {{ end }}
+    </div>
+  </div>
+</section>
