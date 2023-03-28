@@ -1,0 +1,25 @@
+.icit-credit {
+    @include fsz(14px);
+
+    margin-bottom: 0;
+
+    &__link {
+
+        &:link,
+        &:visited {
+            color: $black;
+        }
+
+        &:hover {
+            text-decoration: none;
+        }
+
+        &--icit:hover {
+            color: #de1301;
+        }
+
+        &--sf:hover {
+            color: #ff8501;
+        }
+    }
+}

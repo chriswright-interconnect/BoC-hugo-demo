@@ -1,0 +1,34 @@
+.footer-menu {
+
+    &__list {
+        @extend %list-reset;
+
+        align-items: center;
+        display: flex;
+        flex-direction: row;
+        margin-bottom: 20px;
+
+        @include tablet {
+            justify-content: center;
+            margin-bottom: 0;
+        }
+    }
+
+    &__item {
+        display: inline-block;
+        margin-right: 20px;
+    }
+
+    &__link {
+        @include fsz($font-sm-2);
+        @extend %underline-hover;
+
+        text-transform: uppercase;
+
+        &:link,
+        &:visited {
+            color: $white;
+            display: block;
+        }
+    }
+}

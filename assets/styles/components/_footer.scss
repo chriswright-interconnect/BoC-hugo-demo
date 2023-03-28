@@ -1,0 +1,34 @@
+.footer {
+
+    &__dark {
+        background: $black;
+        color: $white;
+        padding: 40px 0;
+    }
+
+    &__light {
+        background: $accent-color-light;
+        color: $black;
+        padding: 20px 0;
+    }
+
+    &__container {
+        @extend %container;
+
+        display: flex;
+        flex-direction: column;
+
+        @include tablet {
+            flex-direction: row;
+            align-items: center;
+        }
+
+        &--row {
+            justify-content: space-between;
+        }
+
+        &--credit {
+            justify-content: flex-end;
+        }
+    }
+}

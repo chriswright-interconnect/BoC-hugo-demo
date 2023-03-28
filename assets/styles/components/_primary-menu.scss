@@ -91,9 +91,9 @@
         }
 
         .primary-menu__item--book & {
-            @extend .sf-button;
-            @extend .sf-button--small;
-            @extend .sf-button--primary;
+            @extend .button;
+            @extend .button--small;
+            @extend .button--primary;
 
             margin-top: 40px;
 
