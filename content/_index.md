@@ -35,6 +35,16 @@ Logos:
   - image: "images/companies/HSBC.svg"
   - image: "images/companies/Lego.svg"
   - image: "images/companies/Virgin Media.svg"
-
+Quotes: 
+  - text: "I shared many of my learnings with my team. It moved us from creativity is for creatives, to creativity is a core team value"
+    source: "VP Marketing, Bayer"
+  - text: "Inspirational content presented in a very engaging way"
+    source: "Senior Manager, Post Office"
+  - text: "I loved this course. I thought John's films were great and i wish I could share some of the snippets from them with my team"
+    source: "Director, HSBC"
+  - text: "Learning that never exhausts the mind but provides clarity and inspiration"
+    source: "Creative Director, BBCO"
+  - text: "Extremely succinct and potent summary of learnings and reminders"
+    source: "Senior Manager, Suntory"
 
 ---

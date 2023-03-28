@@ -34,6 +34,8 @@
 
     {{ partial "logotypes" (dict "Title" "Global Companies Enrolled" "Logos" .Params.Logos) }}
 
+    {{ partial "quotes-slider" (dict "Title" "Testimonials" "Quotes" .Params.Quotes) }}
+
     <p>{{.Content}}</p>
 
 {{ end }}

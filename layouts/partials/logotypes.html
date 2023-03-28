@@ -5,7 +5,8 @@
     <h2 class="logotypes__title sf-section__title">{{ .Title }}</h2>
 
     <div class="logotypes__list">
-        {{ $Logos := .Logos }} {{ range $Logo := $Logos }}
+        {{ $Logos := .Logos }} 
+        {{ range $Logo := $Logos }}
         <div class="logotypes__item">
             <img loading="lazy" src="{{ $Logo.image }}" />
         </div>

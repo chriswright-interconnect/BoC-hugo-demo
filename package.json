@@ -1,0 +1,22 @@
+{
+  "name": "boc-hugo-demo",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/chriswright-interconnect/BoC-hugo-demo.git"
+  },
+  "author": "Chris Wright",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/chriswright-interconnect/BoC-hugo-demo/issues"
+  },
+  "homepage": "https://github.com/chriswright-interconnect/BoC-hugo-demo#readme",
+  "dependencies": {
+    "jquery": "^3.6.4",
+    "slick-carousel": "1.8.1",
+    "vanilla-lazyload": "10.15.0"
+  }
+}

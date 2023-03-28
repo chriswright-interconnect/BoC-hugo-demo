@@ -1,0 +1,29 @@
+{{ $Quotes := .Quotes }}
+
+<section class="quotes-slider section">
+    <div class="quotes-slider__content section__container">
+
+            <h2 class="quotes-slider__title section__title">
+                {{ .Title }}
+            </h2>
+
+            <div class="quotes-slider__grid">
+                <div class="quotes-slider__list">
+                    {{ range $Quote := $Quotes}}
+                        <div class="quotes-slider__block-container">
+                            <div class="quotes-slider__block">
+
+                                <h3 class="quotes-slider__block-text">
+                                    {{ $Quote.text }}
+                                </h3>
+                                <p class="quotes-slider__block-source">
+                                    {{ $Quote.source }}
+                                </p>
+                            </div>
+                        </div>
+                    {{ end }}
+                </div>
+            </div>
+
+    </div>
+</section>
