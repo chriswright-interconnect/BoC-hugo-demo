@@ -16,10 +16,6 @@
       @include mobile {
         @include column-span(2, 12);
       }
-
-      @include widescreen {
-        @include column-span(3, 10);
-      }
     }
 
     strong {
@@ -46,7 +42,6 @@
     }
 
     @include widescreen {
-      @include column-span(3, 11);
       @include font-size(font-lg-4);
     }
   }
@@ -68,9 +63,6 @@
       @include font-size(font-lg-1);
     }
 
-    @include widescreen {
-      @include column-span(3, 11);
-    }
 
     &:link,
     &:visited {

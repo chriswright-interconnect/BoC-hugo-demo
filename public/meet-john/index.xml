@@ -1,20 +1,11 @@
 <?xml version="1.0" encoding="utf-8" standalone="yes"?>
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
-    <title>Meet-johns on My New Hugo Site</title>
+    <title>Meet John on My New Hugo Site</title>
     <link>http://example.org/meet-john/</link>
-    <description>Recent content in Meet-johns on My New Hugo Site</description>
+    <description>Recent content in Meet John on My New Hugo Site</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Fri, 24 Mar 2023 09:29:40 +0000</lastBuildDate><atom:link href="http://example.org/meet-john/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Meet John</title>
-      <link>http://example.org/meet-john/meet-john/</link>
-      <pubDate>Fri, 24 Mar 2023 09:29:40 +0000</pubDate>
-      
-      <guid>http://example.org/meet-john/meet-john/</guid>
-      <description>test</description>
-    </item>
-    
   </channel>
 </rss>

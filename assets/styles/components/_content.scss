@@ -1,0 +1,15 @@
+.content {
+  @extend %container;
+
+  &__container {
+    @include tablet {
+      @include grid-column-layout(12);
+    }
+
+    & > * {
+      @include tablet {
+        @include column-span(3, 11);
+      }
+    }
+  }
+}

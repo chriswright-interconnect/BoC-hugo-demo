@@ -7,14 +7,5 @@
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
     <lastBuildDate>Thu, 23 Mar 2023 09:54:33 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
-    <item>
-      <title>Meet John</title>
-      <link>http://example.org/meet-john/meet-john/</link>
-      <pubDate>Fri, 24 Mar 2023 09:29:40 +0000</pubDate>
-      
-      <guid>http://example.org/meet-john/meet-john/</guid>
-      <description>test</description>
-    </item>
-    
   </channel>
 </rss>
