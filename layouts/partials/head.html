@@ -12,4 +12,7 @@
   {{ $js := resources.Get "../assets/js/main.js" | js.Build }}
 
   <script defer crossorigin="anonymous" src="{{ $js.RelPermalink }}" integrity="{{ $js.Data.Integrity }}"></script>
+
+  {{ $favicon := resources.Get "../assets/images/favicon.avif" }}
+  <link rel="icon" href="{{ $favicon.RelPermalink }}" sizes="32x32">
 </head>

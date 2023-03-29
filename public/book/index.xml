@@ -1,0 +1,20 @@
+<?xml version="1.0" encoding="utf-8" standalone="yes"?>
+<rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
+  <channel>
+    <title>Books on Business of Creativity</title>
+    <link>https://sage-smakager-8e75e4.netlify.app/book/</link>
+    <description>Recent content in Books on Business of Creativity</description>
+    <generator>Hugo -- gohugo.io</generator>
+    <language>en-us</language>
+    <lastBuildDate>Wed, 29 Mar 2023 12:04:41 +0100</lastBuildDate><atom:link href="https://sage-smakager-8e75e4.netlify.app/book/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book</title>
+      <link>https://sage-smakager-8e75e4.netlify.app/book/book/</link>
+      <pubDate>Wed, 29 Mar 2023 12:04:41 +0100</pubDate>
+      
+      <guid>https://sage-smakager-8e75e4.netlify.app/book/book/</guid>
+      <description>test</description>
+    </item>
+    
+  </channel>
+</rss>

@@ -2,17 +2,53 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Business of Creativity</title>
-    <link>http://example.org/</link>
+    <link>https://sage-smakager-8e75e4.netlify.app/</link>
     <description>Recent content on Business of Creativity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Thu, 23 Mar 2023 09:54:33 +0000</lastBuildDate><atom:link href="http://example.org/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Thu, 23 Mar 2023 09:54:33 +0000</lastBuildDate><atom:link href="https://sage-smakager-8e75e4.netlify.app/index.xml" rel="self" type="application/rss+xml" />
+    <item>
+      <title>Book</title>
+      <link>https://sage-smakager-8e75e4.netlify.app/book/book/</link>
+      <pubDate>Wed, 29 Mar 2023 12:04:41 +0100</pubDate>
+      
+      <guid>https://sage-smakager-8e75e4.netlify.app/book/book/</guid>
+      <description>test</description>
+    </item>
+    
+    <item>
+      <title>Creating a culture</title>
+      <link>https://sage-smakager-8e75e4.netlify.app/modules/creating-a-culture/</link>
+      <pubDate>Tue, 28 Mar 2023 16:10:44 +0100</pubDate>
+      
+      <guid>https://sage-smakager-8e75e4.netlify.app/modules/creating-a-culture/</guid>
+      <description> How to inspire a creative culture The importance of coming up with a philosophy to guide your creativity John&#39;s philosophy and how to find yours The role of humour How the power triangle should be inverted in a creative culture How to manage creativity </description>
+    </item>
+    
+    <item>
+      <title>The power of truth</title>
+      <link>https://sage-smakager-8e75e4.netlify.app/modules/the-power-of-truth/</link>
+      <pubDate>Tue, 28 Mar 2023 16:10:30 +0100</pubDate>
+      
+      <guid>https://sage-smakager-8e75e4.netlify.app/modules/the-power-of-truth/</guid>
+      <description> Without truth an idea loses its power The truth of art is fundamental to its success Truth in business Truth in brand and why brands were originally formed What word should be used instead of brand The power of a movement </description>
+    </item>
+    
+    <item>
+      <title>How to get started</title>
+      <link>https://sage-smakager-8e75e4.netlify.app/modules/getting-started/</link>
+      <pubDate>Tue, 28 Mar 2023 16:10:14 +0100</pubDate>
+      
+      <guid>https://sage-smakager-8e75e4.netlify.app/modules/getting-started/</guid>
+      <description> Understanding words can be a barrier Creativity doesn&#39;t exist in a vacuum The role confidence plays in creativity How to navigate risk How to overcome the fear of a blank page The importance of your north star </description>
+    </item>
+    
     <item>
       <title>Understanding Creativity</title>
-      <link>http://example.org/modules/understanding-creativity/</link>
+      <link>https://sage-smakager-8e75e4.netlify.app/modules/understanding-creativity/</link>
       <pubDate>Fri, 24 Mar 2023 09:29:40 +0000</pubDate>
       
-      <guid>http://example.org/modules/understanding-creativity/</guid>
+      <guid>https://sage-smakager-8e75e4.netlify.app/modules/understanding-creativity/</guid>
       <description>The role creativity plays in businessThe need for marketers to shift from stalking to seducingThe types of creativityUnderstanding the difference between creativity and innovationCreativity as an expression of self</description>
     </item>
     

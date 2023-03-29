@@ -2,10 +2,10 @@
 <rss version="2.0" xmlns:atom="http://www.w3.org/2005/Atom">
   <channel>
     <title>Meet John on Business of Creativity</title>
-    <link>http://example.org/meet-john/</link>
+    <link>https://sage-smakager-8e75e4.netlify.app/meet-john/</link>
     <description>Recent content in Meet John on Business of Creativity</description>
     <generator>Hugo -- gohugo.io</generator>
     <language>en-us</language>
-    <lastBuildDate>Fri, 24 Mar 2023 09:29:40 +0000</lastBuildDate><atom:link href="http://example.org/meet-john/index.xml" rel="self" type="application/rss+xml" />
+    <lastBuildDate>Fri, 24 Mar 2023 09:29:40 +0000</lastBuildDate><atom:link href="https://sage-smakager-8e75e4.netlify.app/meet-john/index.xml" rel="self" type="application/rss+xml" />
   </channel>
 </rss>

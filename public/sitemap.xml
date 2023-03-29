@@ -2,20 +2,35 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
   <url>
-    <loc>http://example.org/modules/</loc>
+    <loc>https://sage-smakager-8e75e4.netlify.app/book/book/</loc>
+    <lastmod>2023-03-29T12:04:41+01:00</lastmod>
+  </url><url>
+    <loc>https://sage-smakager-8e75e4.netlify.app/book/</loc>
+    <lastmod>2023-03-29T12:04:41+01:00</lastmod>
+  </url><url>
+    <loc>https://sage-smakager-8e75e4.netlify.app/modules/</loc>
     <lastmod>2023-03-29T09:15:38+01:00</lastmod>
   </url><url>
-    <loc>http://example.org/meet-john/</loc>
+    <loc>https://sage-smakager-8e75e4.netlify.app/modules/creating-a-culture/</loc>
+    <lastmod>2023-03-28T16:10:44+01:00</lastmod>
+  </url><url>
+    <loc>https://sage-smakager-8e75e4.netlify.app/modules/the-power-of-truth/</loc>
+    <lastmod>2023-03-28T16:10:30+01:00</lastmod>
+  </url><url>
+    <loc>https://sage-smakager-8e75e4.netlify.app/modules/getting-started/</loc>
+    <lastmod>2023-03-28T16:10:14+01:00</lastmod>
+  </url><url>
+    <loc>https://sage-smakager-8e75e4.netlify.app/meet-john/</loc>
     <lastmod>2023-03-24T09:29:40+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/modules/understanding-creativity/</loc>
+    <loc>https://sage-smakager-8e75e4.netlify.app/modules/understanding-creativity/</loc>
     <lastmod>2023-03-24T09:29:40+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/</loc>
+    <loc>https://sage-smakager-8e75e4.netlify.app/</loc>
     <lastmod>2023-03-23T09:54:33+00:00</lastmod>
   </url><url>
-    <loc>http://example.org/categories/</loc>
+    <loc>https://sage-smakager-8e75e4.netlify.app/categories/</loc>
   </url><url>
-    <loc>http://example.org/tags/</loc>
+    <loc>https://sage-smakager-8e75e4.netlify.app/tags/</loc>
   </url>
 </urlset>
