@@ -1,7 +1,7 @@
 ---
 title: "The power of truth"
 date: 2023-03-28T16:10:30+01:00
-draft: true
+draft: false
 ModuleNumber: 3
 Icon: "the-power-of-truth.svg"
 VideoURL: "https://youtu.be/8nKNYF4BGuY"

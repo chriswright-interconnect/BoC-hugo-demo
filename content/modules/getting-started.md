@@ -1,7 +1,7 @@
 ---
 title: "How to get started"
 date: 2023-03-28T16:10:14+01:00
-draft: true
+draft: false
 ModuleNumber: 2
 Icon: "how-to-get-started.svg"
 VideoURL: "https://youtu.be/E3f9i2BE0UQ"

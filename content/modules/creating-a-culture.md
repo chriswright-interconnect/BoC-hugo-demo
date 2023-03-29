@@ -1,7 +1,7 @@
 ---
 title: "Creating a culture"
 date: 2023-03-28T16:10:44+01:00
-draft: true
+draft: false
 ModuleNumber: 4
 Icon: "creating-a-culture.svg"
 VideoURL: "https://youtu.be/Qskodor4zso"
