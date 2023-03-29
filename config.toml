@@ -1,4 +1,4 @@
-baseURL = 'http://example.org/'
+baseURL = 'https://sage-smakager-8e75e4.netlify.app/'
 languageCode = 'en-us'
 title = 'Business of Creativity'
 [markup.goldmark.renderer]
