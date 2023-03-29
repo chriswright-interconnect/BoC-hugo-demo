@@ -1,0 +1,71 @@
+.module-navigation {
+    @include fullwidth;
+
+    background-color: $accent-color;
+    padding-top: 6px; //offsets font line-height
+
+    &__container {
+        @extend %container;
+
+        display: flex;
+        flex-flow: row wrap;
+        align-items: center;
+        justify-content: center;
+
+    }
+
+    &__link {
+        @include font-size(font-lg);
+
+        display: flex;
+        font-weight: $medium;
+        white-space: nowrap;
+        margin-top: 20px;
+        margin-bottom: 20px;
+
+        &::before,
+        &::after {
+            height: 1.2em;
+            background-position: center 0.2em;
+        }
+
+        &:link,
+        &:visited,
+        &:hover {
+            color: $black
+        }
+
+        &--next {
+            margin-left: 20px;
+
+            @include tablet {
+                margin-left: 80px;
+            }
+
+            &::after {
+                @extend %chevron-right;
+            }
+
+            &:hover::after {
+                @extend %chevron-animation-right;
+            }
+        }
+
+        &--prev {
+            margin-right: 20px;
+
+            @include tablet {
+                margin-right: 80px;
+            }
+
+            &::before {
+                @extend %chevron-left;
+
+            }
+
+            &:hover::before {
+                @extend %chevron-animation-left;
+            }
+        }
+    }
+}

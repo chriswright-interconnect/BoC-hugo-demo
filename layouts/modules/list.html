@@ -1,0 +1,33 @@
+{{ define "main" }}
+
+{{ partial "page-header" (dict
+     "Heading" "The Course"
+     "SubHeading" "The Business of Creativity. This course is 8 Weekly sessions to give you the tools to start winning."
+     "Text" "Delivered by Sir John Hegarty, this course will teach you to do this that and the other. According to McKinsey, 70% of companies that engaged with Creativity had better returns to Shareholders. Founded by John Hegarty, The Business of Creativity course equips you with tangible tools to take forward and unlock the enormous impact that creativity will have on your business, your career and everyday life."
+)}}
+
+<section class="section">
+     <div class="section__container">
+          <div class="cards cards--2">
+               {{ range (.Pages.ByParam "ModuleNumber") }}
+                    <a class="card" href="{{.Permalink}}">
+                         <div class="card__text">
+                              <h3 class="card__module">
+                                   Module {{ .Params.ModuleNumber }}
+                              </h3>
+                              <h2 class="card__title" itemprop="name headline">
+                                   {{ .Params.title }}
+                              </h2>
+                         </div>
+                         <div class="card__footer">
+                              <div class="card__image">
+                                   <img src="images/{{.Params.Icon}}">
+                              </div>
+                         </div>
+                    </a>
+               {{ end }}
+          </div>
+     </div>
+</section>
+
+{{ end }}

@@ -1,0 +1,21 @@
+<section class="page-header section">
+  <div class="page-header__content section__container">
+
+    {{ if .Heading }}
+    <h1 class="page-header__heading">{{ .Heading }}</h1>
+    {{ end }}
+
+    {{ if .SubHeading }}
+    <h2 class="page-header__sub-heading">
+        {{ .SubHeading }}
+    </h2>
+    {{ end }}
+
+    {{ if .Text }}
+    <div class="page-header__text">
+        {{ .Text }}
+    </div>
+    {{ end }}
+
+  </div>
+</section>

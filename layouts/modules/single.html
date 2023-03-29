@@ -1,0 +1,56 @@
+{{ define "main" }}
+<div class="content">
+  <div class="content__container">
+    <div class="module-header">
+      <div class="module-header__title-container">
+        <h1 class="module-header__title">{{ .Params.title }}</h1>
+      </div>
+
+      <div class="module-header__row">
+        <div class="module-header__image-container">
+          <img class="module-header__image" src="../images/{{.Params.Icon}}" />
+        </div>
+
+        <div class="module-header__text">
+          <h2 class="module-header__module">
+            Module {{ .Params.ModuleNumber }}
+          </h2>
+
+          <div class="module-header__content" itemprop="text">
+            {{ .Content | safeHTML }}
+          </div>
+        </div>
+      </div>
+    </div>
+
+    {{ if .Params.VideoURL }}
+    <section class="module-video">
+      {{ partial "video" (dict "YouTubeURL" .Params.VideoURL) }}
+    </section>
+    {{ end }}
+
+    <section class="module-footer">
+        <h3 class="module-footer__heading">More Modules</h3>
+
+        <div class="module-navigation">
+            <div class="module-navigation__container">
+                {{ if .PrevPage }}
+                <a class="module-navigation__link module-navigation__link--prev" href="{{ .PrevPage.Permalink }}">
+                    Previous Module
+                </a>
+                {{ end }}
+                
+                {{ if .NextPage }}
+                <a class="module-navigation__link module-navigation__link--next" href="{{ .NextPage.Permalink }}">
+                    Next Module
+                </a>
+                {{ end }}
+            </div>
+        </div>
+
+    </section>
+
+  </div>
+</div>
+
+{{ end }}

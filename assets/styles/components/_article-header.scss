@@ -1,0 +1,55 @@
+// Controls headers for articles and pages
+
+.article-header,
+.page-header {
+    &__content {
+        @extend %section-padding;
+
+        @include tablet {
+            @include grid-column-layout(12);
+        }
+    }
+
+    &__heading {
+        @extend %page-header;
+
+        @include widescreen {
+            @include column-span(2, 12);
+        }
+    }
+
+    &__sub-heading {
+        @include font-size(font-lg-1);
+
+        margin-top: 60px;
+
+        @include mobile {
+            @include font-size(font-lg-2);
+
+            margin-top: 130px;
+        }
+
+        @include tablet {
+            @include column-span(2, 12);
+        }
+
+        @include widescreen {
+            @include column-span(3, 11);
+        }
+    }
+
+    &__text {
+        @include font-size(font-base);
+
+        font-weight: $medium;
+        margin-top: 50px;
+
+        @include tablet {
+            @include column-span(2, 12);
+        }
+
+        @include widescreen {
+            @include column-span(3, 11);
+        }
+    }
+}

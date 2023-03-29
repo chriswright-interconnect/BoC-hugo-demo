@@ -1,5 +1,5 @@
 baseURL = 'http://example.org/'
 languageCode = 'en-us'
-title = 'My New Hugo Site'
+title = 'Business of Creativity'
 [markup.goldmark.renderer]
   unsafe = true # Allow HTML in md files

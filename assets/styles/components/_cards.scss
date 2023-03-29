@@ -1,0 +1,19 @@
+.cards {
+    @include grid-column-layout(4, $gutter $gutter);
+
+    @include mobile {
+        @include grid-column-layout(12, $gutter $gutter);
+    }
+
+    &--sidebar {
+        @include grid-column-layout(4, 45px);
+
+        @include mobile {
+            @include grid-column-layout(12, $gutter $gutter);
+        }
+
+        @include desktop {
+            @include grid-column-layout(3, 45px);
+        }
+    }
+}

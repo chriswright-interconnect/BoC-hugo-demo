@@ -8,8 +8,8 @@
 ) 
 }}
 
-<div class="content">
-     <div class="content__container">
+<div class="text-content">
+     <div class="text-content__container">
           {{.Content}}
      </div>
 </div>
@@ -18,9 +18,34 @@
      "LargeHeader" "John Hegarty has been central to the global advertising scene for over six decades."          
 )}}
 
-{{ partial "text-block" (dict
-     "LargeHeader" "John Hegarty has been central to the global advertising scene for over six decades."          
-)}}
+{{ partial "text-block-open" (dict "Type" "highlights") }}
+
+{{ partial "icon-header" (dict "Title" "Career Highlights" ) }}
+
+<ul>
+     <li>Founding partner of Saatchi and Saatchi</li>
+     <li>Co-founded Bartle Bogle Hegarty</li>
+     <li>D&AD President’s Award for outstanding achievement</li>
+     <li>US AAF Hall of Fame</li>
+     <li>Awarded a knighthood for services to advertising and creative industries</li>
+     <li>Recipient of the first Lion of St Mark award</li>
+     <li>John has written 2 books on Creativity</li>
+     <li>Co-founded The Garage Soho</li>
+</ul>
+
+{{ partial "text-block-close" }}
+
+{{ partial "text-block-open" (dict "Type" "small") }}
+
+{{ partial "icon-header" (dict "Title" "About Sir John Hegarty" "SubTitle" "Creative and Founder ") }}
+
+<p>He was a founding partner of Saatchi and Saatchi in 1970. And then TBWA in 1973. He founded Bartle Bogle Hegarty in 1982 with John Bartle and Nigel Bogle. The agency now has 7 offices around the world. He has been given the D&AD President's Award for outstanding achievement and in 2014 was admitted to the US AAF Hall of Fame.</p>
+
+<p>John was awarded a Knighthood by the Queen in 2007 and was the recipient of the first Lion of St Mark award at the Cannes Festival of Creativity in 2011. John has written 2 books, 'Hegarty on Advertising - Turning Intelligence into Magic' and 'Hegarty on Creativity - there are no rules'.</p>
+
+<p>In 2014 John co-founded The Garage Soho, a seed stage Venture Capital fund that believes in building brands, not just businesses.</p>
+
+{{ partial "text-block-close" }}
 
 
 {{ end }}

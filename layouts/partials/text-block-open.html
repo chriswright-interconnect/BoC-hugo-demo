@@ -1,0 +1,9 @@
+<section class="text-block section {{ if .Type }}text-block--{{ .Type }}{{ end }}">
+  <div class="text-block__container section__container">
+
+  <div class="text-block__inner">
+      {{ if .LargeHeader }}
+      <h2 class="text-block__large-header">{{ .LargeHeader | safeHTML }}</h2>
+      {{ end }} 
+
+

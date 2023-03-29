@@ -1,0 +1,99 @@
+.module-header {
+    @extend %section-padding;
+
+    &__title-container {
+        @include tablet {
+            @include grid-column-layout(12);
+        }
+    }
+
+    &__title {
+        @extend %page-header;
+
+        margin-bottom: 60px;
+
+        @include tablet {
+            @include column-span(2, 10);
+        }
+
+        @include widescreen {
+            @include column-span(2, 8);
+        }
+    }
+
+    &__row {
+        @include grid-column-layout(4);
+
+        grid-auto-rows: auto;
+
+        @include tablet {
+            @include grid-column-layout(12);
+        }
+
+        @include desktop {
+            align-items: center;
+        }
+    }
+
+    &__image-container {
+        @include column-span(1, 4);
+
+        margin-bottom: 50px;
+
+        @include mobile {
+            @include column-span(1, 3);
+        }
+
+        @include tablet {
+            @include column-span(2, 5);
+
+            margin-bottom: 0;
+            margin-left: -$gutter;
+        }
+    }
+
+    &__image {
+        width: 100%;
+        max-height: 350px;
+    }
+
+    &__text {
+        @include column-span(1, -1);
+
+        @include tablet {
+            @include column-span(5, 11);
+        }
+    }
+
+    &__module {
+        @include font-size(font-lg-2);
+
+        font-weight: $thin;
+        margin-bottom: 50px;
+        text-transform: uppercase;
+    }
+
+    &__content {
+        @extend %text-elements;
+
+        ul,
+        ol {
+            @include desktop {
+                @include font-size(font-base);
+            }
+        }
+
+        li {
+           font-weight: $thin;
+            margin-bottom: 10px;
+
+            strong {
+                font-weight: $medium;
+            }
+
+            &::before {
+                top: 0.55em;
+            }
+        }
+    }
+}

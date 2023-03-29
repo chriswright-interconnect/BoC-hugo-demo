@@ -1,0 +1,143 @@
+.card {
+    position: relative;
+    grid-column: 4 span;
+    background-color: $primary-color;
+    transition: background-color 500ms ease-in-out;
+    padding-bottom: 85%;
+    text-decoration: none;
+
+    @include mobile {
+        grid-column: 12 span;
+    }
+
+    @include tablet {
+        @include grid-column-layout(6);
+
+        grid-column: 12 span;
+        padding-bottom: 70%;
+    }
+
+    @include desktop {
+        grid-column: 6 span;
+    }
+
+    &:hover {
+        background-color: $black;
+    }
+
+    &__text {
+        padding: 40px 40px 0;
+
+        @include tablet {
+            @include column-span(1, 7);
+        }
+
+        @include desktop {
+            @include column-span(2, 7);
+
+            padding: 50px 50px 0 0;
+        }
+
+        @include widescreen {
+            @include column-span(3, 7);
+        }
+    }
+
+    &__module {
+        color: $black;
+        font-weight: $thin;
+        text-transform: uppercase;
+    }
+
+    &__title {
+        @include font-size(font-lg-1);
+
+        font-weight: $medium;
+        color: $accent-color;
+        margin-bottom: 0;
+
+        @include mobile {
+            @include font-size(font-lg-2);
+        }
+    }
+
+    &__footer {
+        @include grid-column-layout(2);
+
+        position: absolute;
+        align-items: flex-end;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        height: 55%;
+        z-index: 0;
+        padding: 15px;
+
+        @include mobile {
+            height: 65%;
+        }
+
+        @include tablet {
+            @include column-span(1, 7);
+
+            padding: 40px 30px;
+        }
+
+        @include desktop {
+            height: 55%;
+            padding: 30px;
+        }
+
+        @include widescreen {
+            height: 65%;
+            padding: 60px;
+        }
+
+        &::before {
+            content: '';
+            display: block;
+            position: absolute;
+            top: 1px;
+            left: -1px;
+            right: -1px;
+            height: 100%;
+            background-color: $accent-color;
+            z-index: -1;
+            clip-path: polygon(25% 0, 93% 75%, 100% 65%, 100% 100%, 0 100%, 0 28%);
+
+            @include tablet {
+                clip-path: polygon(25% 0, 93% 85%, 100% 75%, 100% 100%, 0 100%, 0 40%);
+            }
+        }
+    }
+
+    &__image {
+        @include column-span(1, 2);
+
+        z-index: 1;
+        width: 100%;
+        max-height: 170px;
+
+        @include mobile {
+            max-width: 210px;
+            max-height: 210px;
+        }
+
+        @include tablet {
+            max-width: 240px;
+            max-height: 240px;
+        }
+
+        @include desktop {
+            max-width: 180px;
+            max-height: 180px;
+        }
+
+        @include widescreen {
+            max-width: 240px;
+            max-height: 240px;
+        }
+    }
+
+
+}

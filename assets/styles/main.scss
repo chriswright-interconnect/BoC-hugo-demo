@@ -10,6 +10,9 @@
 @import "common/lazy";
 
 // Components
+@import "components/article-header";
+@import "components/card";
+@import "components/cards";
 @import "components/content";
 @import "components/copyrights";
 @import "components/features-list";
@@ -20,12 +23,19 @@
 @import "components/header";
 @import "components/hero";
 @import "components/icit-credit";
+@import "components/icon-header";
 @import "components/logo";
 @import "components/logotypes";
+@import "components/module-footer";
+@import "components/module-header";
+@import "components/module-navigation";
+@import "components/module-video";
+@import "components/page-header";
 @import "components/primary-menu";
 @import "components/primary-menu-toggle";
 @import "components/section";
 @import "components/statistics";
 @import "components/text-block";
+@import "components/text-content";
 @import "components/video";
 @import "components/quotes-slider";

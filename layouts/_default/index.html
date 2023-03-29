@@ -5,28 +5,33 @@
             "Type" "home" 
             "Heading" "The Business of Creativity Course"
             "ButtonText" "Learn More"
-            "ButtonURL" "#"
+            "ButtonURL" "/modules/"
         ) 
     }}
 
-    {{ partial "text-block" 
+    {{ partial "text-block-open" 
     (dict 
         "LargeHeader" "Unlock the enormous impact that <strong>creativity</strong> can have on your business, brand and everyday life."
-        "H3" "Sir John Hegarty (creative founder at Saatchi & Saatchi & BBH) will lead an 8-week course to equip you with tangible tools to help you win through the application of creativity."
-        "LinkURL" "#"
-        "LinkText" "Learn More"
     )
     }}
+
+        <h3>Sir John Hegarty (creative founder at Saatchi & Saatchi & BBH) will lead an 8-week course to equip you with tangible tools to help you win through the application of creativity.</h3>
+        <a href="/modules/">Learn More</a>
+
+    {{ partial "text-block-close"}}
 
     {{ partial "features-list" (dict "FeatureCards" .Params.FeatureCards "Title" "Course Format") }}
 
 
-    {{ partial "text-block" 
+    {{ partial "text-block-open" 
     (dict 
         "LargeHeader" "70% of companies that engage with <strong>creativity</strong> had above-average total returns to shareholders."
-        "H3" "<strong>McKinsey & Company</strong>"
     )
     }}
+
+    <h3><strong>McKinsey & Company</strong></h3>
+
+    {{ partial "text-block-close" }}
 
     {{ partial "video" (dict "YouTubeURL" "https://youtu.be/ChFELzrJr4Q") }}
 

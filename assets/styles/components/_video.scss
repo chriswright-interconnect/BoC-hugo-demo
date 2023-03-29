@@ -1,6 +1,16 @@
 .video {
     position: relative;
 
+    .module-video & {
+        @include tablet {
+            @include column-span(2, 12);
+        }
+    }
+
+    &.section .section__container {
+        padding: 0;
+    }
+
     &__embed {
         @include fullwidth;
 
