@@ -4,7 +4,7 @@
     <div class="hero-banner__background-block"></div>
     <div class="hero-banner__image-container">
       {{ $heroImageHome := resources.Get "../assets/images/hero-homepage.jpg" }}
-      <img class="hero-banner__image lazy" src="{{ $heroImageHome.RelPermalink }}" />
+      <img class="hero-banner__image lazy" data-src="{{ $heroImageHome.RelPermalink }}" />
     </div>
   </div>
   {{ end }}
@@ -36,16 +36,16 @@
 
     <div class="hero-banner__image-container hero-banner__image-container--sm">
       {{ $overlaySM := resources.Get "../assets/images/hero-overlay-sm.svg" }}
-      <img class="hero-banner__overlay lazy" src="{{ $overlaySM.RelPermalink }}"/>
+      <img class="hero-banner__overlay lazy" data-src="{{ $overlaySM.RelPermalink }}"/>
       {{ $heroImageJHsm := resources.Get "../assets/images/hero-jh-sm.jpg" }}
-      <img class="hero-banner__image lazy" src="{{ $heroImageJHsm.RelPermalink }}"/>
+      <img class="hero-banner__image lazy" data-src="{{ $heroImageJHsm.RelPermalink }}"/>
     </div>
 
     <div class="hero-banner__image-container hero-banner__image-container--lg">
         {{ $overlay := resources.Get "../assets/images/hero-overlay.svg" }}
-        <img class="hero-banner__overlay lazy" src="{{ $overlay.RelPermalink }}"/>
+        <img class="hero-banner__overlay lazy" data-src="{{ $overlay.RelPermalink }}"/>
         {{ $heroImageJH := resources.Get "../assets/images/hero-jh.jpg" }}
-        <img class="hero-banner__image lazy" src="{{ $heroImageJH.RelPermalink }}"/>
+        <img class="hero-banner__image lazy" data-src="{{ $heroImageJH.RelPermalink }}"/>
     </div>
 
   {{ end }}

@@ -8,7 +8,7 @@
         {{ $Logos := .Logos }} 
         {{ range $Logo := $Logos }}
         <div class="logotypes__item">
-            <img class="lazy" src="{{ $Logo.image }}" />
+            <img class="lazy" data-src="{{ $Logo.image }}" />
         </div>
         {{ end }}
     </div>
